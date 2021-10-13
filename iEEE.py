@@ -11,12 +11,15 @@ n = nombre
 while n<0:
     fin = fin+'1'
     entier = int((nombre*-1)//1)
+    nombre = (nombre*-1)/1
+    decimal = nombre-entier
     n = 0
 
 while n>0:
     fin = fin+'0'
     entier= int(nombre//1)
-
+    nombre = nombre/1
+    decimal = nombre-entier
     n=0
 i =1
 q=entier
@@ -36,11 +39,13 @@ while q!=0:
             c = 0
         r = 2
     i = i+1
-decimal = nombre-entier
+
 d = decimal
 decbin = ""
 i = 0
 counttwo =0
+e=23
+print(d)
 while d>0:
     d=d*2
     a = d
@@ -55,12 +60,18 @@ while d>0:
             decbin = decbin +'0'
             counttwo = counttwo+1
         a = 1
+    print(count+counttwo)
+    while count+counttwo>=e:
+        d=0
+        e=24
+
+
 mantisse = intbin+decbin
 d = 0
 while d<23-counttwo-count:
     mantisse = mantisse+'0'
     d =d+1
-exponant = 254-(127-count)
+exponant = 254-127+count
 q = exponant
 i =1
 exponantbin = ''
